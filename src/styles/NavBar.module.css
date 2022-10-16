@@ -1,0 +1,11 @@
+.NavBar {
+    background-color: fafafa;
+    border: 3px solid #dadadf;
+    font-size: x-large;
+  }
+
+.H1 {
+  font-size: xx-large;
+  letter-spacing: 7px;
+  font-weight: 500;
+}
