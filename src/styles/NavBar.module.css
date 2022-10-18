@@ -1,11 +1,19 @@
 .NavBar {
-    background-color: fafafa;
-    border: 3px solid #dadadf;
+    background-image: linear-gradient(grey,red, rgb(248, 248, 9));
+    border: 3px solid black;
     font-size: x-large;
   }
 
 .H1 {
   font-size: xx-large;
   letter-spacing: 7px;
-  font-weight: 500;
+  font-family: 'Metal Mania', sans-serif;
+}
+
+.NavLink {
+  padding: 5px;
+}
+
+.Active i {
+  color: black;
 }
