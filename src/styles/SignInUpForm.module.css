@@ -3,12 +3,13 @@
   }
   .Input {
     background: #ffffff;
-    border: 1px solid #f0f1f9;
+    border: 3px solid black;
     box-sizing: border-box;
     border-radius: 2px;
-    color: #7177a1;
+    color: #001eff;
     text-align: center;
     padding: 10px;
+    font-weight: 700;
   }
   
   .Header {
