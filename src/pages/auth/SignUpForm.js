@@ -5,7 +5,7 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import {	
+import {
   Form,	
   Button,	
   Image,	
@@ -39,11 +39,11 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("dj-rest-auth/registration/", signUpData);	
-      history.push("/signin");	
-    } catch (err) {	
-      setErrors(err.response?.data);	
-    }	
+      await axios.post("dj-rest-auth/registration/", signUpData);
+      history.push("/signin");
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
   };
 
   return (
@@ -104,7 +104,9 @@ const SignUpForm = () => {
               </Alert>
             ))}
       
-    <Button className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`} type="submit">
+    <Button 
+    className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`} 
+    type="submit">
     🦇Sign Up🦇
     </Button>
     {errors.non_field_errors?.map((message, idx) => (
@@ -138,4 +140,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default SignUpForm

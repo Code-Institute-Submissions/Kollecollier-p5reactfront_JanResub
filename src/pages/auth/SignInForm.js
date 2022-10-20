@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import axios from "axios";
+
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import axios from "axios";
-
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import {	
   Form,	
   Button,	
@@ -16,31 +17,36 @@ import {
 } from "react-bootstrap";
 
 
+
 function SignInForm() {
-  const [signUpData, setSignUpData] = useState({
+  const setCurrentUser = useSetCurrentUser();
+
+
+  const [signInData, setSignInData] = useState({
     username: "",
     password: "",
   });
 
-  const { username, password } = signUpData;
+  const { username, password } = signInData;
 
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
   const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("dj-rest-auth/login/", signUpData);	
+      const { data } = await axios.post("/dj-rest-auth/login/", signInData);
+      setCurrentUser(data.user);
       history.push("/");
-    } catch (err) {	
+    } catch (err) {
       setErrors(err.response?.data);
-    }	
+    }
   };
-  
+
   const handleChange = (event) => {
-    setSignUpData({
-      ...signUpData,
+    setSignInData({
+      ...signInData,
       [event.target.name]: event.target.value,
     });
   };
