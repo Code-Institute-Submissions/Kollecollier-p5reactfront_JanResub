@@ -15,29 +15,29 @@ export const CurrentUserProvider = ({ children }) => {
 
     const handleMount = async () => {
      try {
-       const {data} = await axiosRes.get("dj-rest-auth/user/");
+       const { data } = await axiosRes.get("dj-rest-auth/user/");
        setCurrentUser(data);
      } catch(err){
        console.log(err);
      }
     };
     
-    useEffect (() => {
-     handleMount();
+	  useEffect(() => {	
+      handleMount();	
     }, []);
 
     useMemo(() => {
-    axiosReq.interceptors.request.use(
-      async (config) => {
-        try {
-          await axios.post("dj-rest-auth/tokens/refresh/");
-        } catch (err) {
-          setCurrentUser((prevCurrentUser) => {
-            if (prevCurrentUser) {
-              history.push("/signin");
-            }
-            return null;
-          })
+      axiosReq.interceptors.request.use(	
+        async (config) => {	
+          try {	
+            await axios.post("/dj-rest-auth/token/refresh/");	
+          } catch (err) {	
+            setCurrentUser((prevCurrentUser) => {	
+              if (prevCurrentUser) {	
+                history.push("/signin");	
+              }	
+              return null;	
+            });
           return config;
         }
         return config;
