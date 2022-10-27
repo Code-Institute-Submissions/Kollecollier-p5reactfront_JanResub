@@ -30,6 +30,8 @@ function PostCreateForm() {
 
   const { title, content, image } = postData;
 
+  console.log("image from postData: ", image);
+
   const imageInput = useRef(null);
   const history = useHistory();
 
@@ -54,15 +56,15 @@ function PostCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("title", title);	
-    formData.append("content", content);	
+    formData.append("title", title);
+    formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
   try {
     const { data } = await axiosReq.post("/posts/", formData);
     history.push(`/posts/${data.id}`);
-  }catch (err) {
+  } catch (err) {
     console.log(err);
-    if (err.response?.status !==401) {
+    if (err.response?.status !== 401) {
       setErrors(err.response?.data);
     }
   }
@@ -124,8 +126,8 @@ function PostCreateForm() {
             <Form.Group className="text-center">
               {image ? (
                 <>
-                <figure>
-                  <Image className={appStyles.Image} src={image} rounded />
+                <figure className="picture">
+                  <Image className={appStyles.Image} src={image} picture/>
                 </figure>
                 <div>
 

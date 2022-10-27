@@ -34,7 +34,7 @@ to="/posts/create">
 <i className="fas fa-plus-square"></i> 
 Add a post
 </NavLink>
-)
+);
 
 const loggedInIcons = 
 <>

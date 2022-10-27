@@ -7,6 +7,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
+
 const Post = (props) => {
     const {
         id,
@@ -23,7 +24,7 @@ const Post = (props) => {
         postPage,
         setPosts,
     } = props;
-
+    console.log("props: ", image);
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
     
@@ -78,6 +79,7 @@ const Post = (props) => {
   return (
     <Card className={styles.Post}>
       <Card.Body>
+
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={55} />

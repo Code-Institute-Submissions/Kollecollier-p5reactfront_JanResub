@@ -39,6 +39,10 @@
     color: #000000;
   }
 
+  .picture {
+    width: 100%;
+  }
+
   figure {
     text-align: center;
     display: inline-block;
