@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import { axiosRes } from '../../api/axiosDefaults';
-import styles from '../../styles/CreateCommentForm.module.css';
+import styles from "../../styles/CommentCreateEditForm.module.css";
 import btnStyles from '../../styles/Buttons.module.css';
 
-function EditCommentForm(props) {
+function CommentEditForm(props) {
   const {
     id, content, setShowEditForm, setComments,
   } = props;
@@ -75,4 +75,4 @@ function EditCommentForm(props) {
   );
 }
 
-export default EditCommentForm;
+export default CommentEditForm;

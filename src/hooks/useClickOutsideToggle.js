@@ -19,4 +19,4 @@ useEffect(() => {
   return {expanded, setExpanded, ref};
 };
 
-export default useClickOutSideToggle
+export default useClickOutSideToggle;
