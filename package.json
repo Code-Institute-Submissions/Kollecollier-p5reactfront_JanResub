@@ -19,6 +19,11 @@
     "web-vitals": "^1.1.2"
   },
 
+  "engines" : {
+    "npm" : "8.15.0",
+    "node" : "v16.17.1"
+   },
+
   "scripts": {
     "heroku-prebuild": "npm install -g serve",
     "start": "react-scripts start",
