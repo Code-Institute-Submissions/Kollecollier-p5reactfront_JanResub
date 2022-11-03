@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '/workspace/p5reactfront/src/styles/Avatar.modules.css'
+import styles from '../styles/Avatar.modules.css'
 
 const Avatar = ({ src, height = 45, text }) => {
   return (
