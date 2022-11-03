@@ -3,15 +3,11 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
 import Asset from "../../components/Asset";
-
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
 import PopularProfiles from "./PopularProfiles";
-
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
@@ -24,7 +20,7 @@ function ProfilePage() {
     const currentUser = useCurrentUser();
     const { id } = useParams();
     const setProfileData = useSetProfileData();
-    const { pageProfile } = useProfileData();
+    const {pageProfile} = useProfileData();
     const [profile] = pageProfile.results;
     const is_owner = currentUser?.username === profile?.owner;
 
@@ -35,10 +31,12 @@ function ProfilePage() {
         const [{ data: pageProfile }] = await Promise.all([
             axiosReq.get(`/profiles/${id}/`),
         ]);
+
         setProfileData((prevState) => ({	
             ...prevState,	
             pageProfile: { results: [pageProfile] },	
           }));
+          
         setHasLoaded(true);
         } catch (err) {
             console.log(err);

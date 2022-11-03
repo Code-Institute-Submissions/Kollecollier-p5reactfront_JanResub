@@ -1,17 +1,29 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+import { axiosRes } from "../../api/axiosDefaults";
 
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
-import { axiosRes } from "../../api/axiosDefaults";
+
+
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id } = props;
-  const [content, setContent] = useState("");
+  const { 
+    post, 
+    setPost, 
+    setComments, 
+    profileImage, 
+    profile_id 
+    } = props;
+
+  const [
+    content, 
+    setContent
+    ] = 
+    useState("");
 
   const handleChange = (event) => {
     setContent(event.target.value);
@@ -24,10 +36,14 @@ function CommentCreateForm(props) {
         content,
         post,
       });
+
+
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],
       }));
+
+
       setPost((prevPost) => ({
         results: [
           {
@@ -36,6 +52,7 @@ function CommentCreateForm(props) {
           },
         ],
       }));
+
       setContent("");
     } catch (err) {
       console.log(err);
@@ -46,9 +63,16 @@ function CommentCreateForm(props) {
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
-          <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profileImage} />
+
+          <Link to=
+          {`/profiles/${profile_id}`}
+          >
+
+            <Avatar 
+            src={profileImage} 
+            />
           </Link>
+          
           <Form.Control
             className={styles.Form}
             placeholder="my comment..."

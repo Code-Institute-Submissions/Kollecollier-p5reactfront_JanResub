@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
+import Avatar from "../../components/Avatar";
+
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
-import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
@@ -24,10 +25,9 @@ const Post = (props) => {
         postPage,
         setPosts,
     } = props;
-    console.log("props: ", image);
+  
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
-    
     const history = useHistory();
 
     const handleEdit = () => {

@@ -28,15 +28,15 @@ function PostEditForm() {
 
   const imageInput = useRef(null);
   const history = useHistory();
-  const {id} = useParams();
+  const { id } = useParams();
 
-  useEffect (() => {
+  useEffect(() => {
     const handleMount = async () => {
         try {
           const { data } = await axiosReq.get(`/posts/${id}/`);
-          const {title, content, image, is_owner} = data;
+          const { title, content, image, is_owner } = data;
+          is_owner ? setPostData({ title, content, image }) : history.push('/');
 
-          is_owner ? setPostData({title, content, image}) : history.push('/')
         } catch (err) {
             console.log(err)
         }
@@ -65,19 +65,20 @@ function PostEditForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("title", title);	
+    formData.append("title", title);
     formData.append("content", content);
     
-    if (imageInput?.current?.files[0]){
+    if (imageInput?.current?.files[0]) {
     formData.append("image", imageInput.current.files[0]);  
     }
     
   try {
     await axiosReq.put(`/posts/${id}/`, formData);
     history.push(`/posts/${id}`);
+
   }catch (err) {
     console.log(err);
-    if (err.response?.status !==401) {
+    if (err.response?.status !== 401) {
       setErrors(err.response?.data);
     }
   }
@@ -87,12 +88,14 @@ function PostEditForm() {
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
+
         <Form.Control
           type="text"
           name="title"
           value={title}
           onChange={handleChange}
         />
+        
         </Form.Group>
         {errors?.title?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
