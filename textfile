@@ -1,0 +1,11 @@
+For backend debuging:
+
+Validator error:
+Validator dom error that was showing in the console
+informing o a a acendant error, This was fixed within the Navbar compenetent bu removing an unneccecery
+href tag in the <navlink></navlink>, removing this also removed the issue from the console.
+
+
+Console logged error that the rendering was running in strict mode.
+The error was caused by my index.js was set <React.StrictMode><App />, 
+The solution was removing <React.StrictMode><App /> and just chaning it to <App />

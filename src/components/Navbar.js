@@ -94,7 +94,7 @@ return (
 
         <NavLink to="/">
         <Navbar.Brand className={styles.H1}
-        href="#home">THE METAL BLOG<img src={logo} alt='logo' height="30"></img> 
+        >THE METAL BLOG<img src={logo} alt='logo' height="30"></img> 
         </Navbar.Brand>
         </NavLink>
 
