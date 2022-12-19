@@ -18,6 +18,7 @@ import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
+
 import { Button, Image } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import NoResults from "../../assets/no-results.png";
@@ -28,9 +29,11 @@ import Post from "../posts/Post";
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profilePosts, setProfilePosts] = useState({ results: [] });
+
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const setProfileData = useSetProfileData();
+
+  const {setProfileData, handleFollow} = useSetProfileData();
   console.log(useProfileData())
 
   const { pageProfile } = useProfileData();
@@ -111,7 +114,7 @@ function ProfilePage() {
 
               <Button
                 className={`${btnStyles.Button} ${btnStyles.Black}`}
-                onClick={() => {}}
+                onClick={() => handleFollow(profile)}
               >
                 Follow
 
