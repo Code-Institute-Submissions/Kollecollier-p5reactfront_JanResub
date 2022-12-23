@@ -20,3 +20,9 @@ The error was fixed by changing the called view from:path "views.FollowerList.as
 
 Frontend 401 token error in consol.
 Was fixed by installing jwt decoder and adding a fuction to refresh tokens in the utilis file.
+
+
+
+
+fix, feed section
+adjust profile icon

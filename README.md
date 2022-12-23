@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Metal Blog
+The Metal Blog is a social media image and blog based platform for metal lover's. Here, users can share there images and express themself freely on a metal based webpage. We also invite users to interact with each other by commenting and liking other user's content.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- The repository for the DRF backend available [HERE](https://github.com/Kollecollier/backend_p5). The installation, set up, and deployment steps ect for the backend are provided in the seperate readme file in the DRF repo.
 
-## Available Scripts
+#### DEPLOYED BACKEND [LINK](https://p5backend.herokuapp.com/)
+#### DEPLOYED FRONTEND [LIVE SITE](https://p5front.herokuapp.com/)
+#### DEPLOYED BACKEND GITHUB [REPOSITORY](https://github.com/Kollecollier/backend_p5)
 
-In the project directory, you can run:
+![This is an image](https://res.cloudinary.com/kolle1993/image/upload/v1671802939/P5%20Readme/mockup_hoxbl0.png)
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
++ [UX](#ux "UX")
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## UX
 
-### `npm test`
+### Site Purpose:
+To bring interactivity to people with a common musical taste by sharing the latest updates and events and general thought's about the music industri.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Site Goal:
+The Red Crayon is intended to keep the community informed about the ongoings in the art-world, and to share inspiration & events with each other, as well as bring people together.
 
-### `npm run build`
+### Audience:
+Everyone with an interest of the heavier music taste, and the desire to reach out & connect with like-minded people.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Current User Goals:
+To keep users coming back n to see what is new and to stay updated on what's new and to stay in touch with followed amd follower's, also to make new friends with common music taste and interest.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### New User Goals:
+To let the new user to engage in a meningful way, here everyone can feel important and speak freely.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Future Goals:
+- To provide the option to upload a video clip, maybe even a section for live video's and event happenings were people can share there latest experience's
 
-### `npm run eject`
+- Provide the ability for users to send private messages.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- A option to create group chat's.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- More interactive content
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## User Stories
+I have included links to the [GitHub Issues](https://github.com/CluelessBiker/project5-red-crayon/issues) for this project, as well as the [KANBAN board](https://github.com/users/CluelessBiker/projects/2).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please also find a full list of the Epics, User stories, & story points typed up [HERE](src/assets/userstories.md).
