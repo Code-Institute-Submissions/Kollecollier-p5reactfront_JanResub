@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -30,6 +30,8 @@ function PostsPage({ message, filter = "" }) {
   const 
   [query, setQuery] = useState("");
 
+  const currentUser = useCurrentUser();
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -37,7 +39,7 @@ function PostsPage({ message, filter = "" }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+       // console.log(err);
       }
     };
 
@@ -49,7 +51,7 @@ function PostsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname]);
+  }, [filter, query, pathname, currentUser]);
 
   return (
     <Row className="h-100">

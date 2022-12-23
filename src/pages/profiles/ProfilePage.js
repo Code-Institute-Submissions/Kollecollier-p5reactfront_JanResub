@@ -35,7 +35,6 @@ function ProfilePage() {
   const { id } = useParams();
 
   const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
-  console.log(useProfileData())
 
   const { pageProfile } = useProfileData();
   const [profile] = pageProfile.results;
@@ -57,7 +56,7 @@ function ProfilePage() {
         setProfilePosts(profilePosts);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+       // console.log(err);
       }
     };
     fetchData();
