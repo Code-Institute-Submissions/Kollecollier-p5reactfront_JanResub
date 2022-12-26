@@ -40,6 +40,32 @@ To let the new user to engage in a meningful way, here everyone can feel importa
 - More interactive content
 
 ## User Stories
-I have included links to the [GitHub Issues](https://github.com/CluelessBiker/project5-red-crayon/issues) for this project, as well as the [KANBAN board](https://github.com/users/CluelessBiker/projects/2).
+I have included links to the [Issues](https://github.com/Kollecollier/p5reactfront/issues) for this project, as well as the [Issues board](https://github.com/users/Kollecollier/projects/13/views/1).
 
-Please also find a full list of the Epics, User stories, & story points typed up [HERE](src/assets/userstories.md).
+
+## Design
+
+## Wireframes:
+
+## Home Page - Desktop Logged out:
+![Desktop loggedout](https://res.cloudinary.com/kolle1993/image/upload/v1671990832/P5%20Readme/Deskop_home_page_logged_out_znfgy4.png)
+
+## Home Page - Desktop Logged in:
+![Desktop loggedin](https://res.cloudinary.com/kolle1993/image/upload/v1671990617/P5%20Readme/Deskop_home_page_loggedin_vzigsq.png)
+
+## Home Page - Mobile: 
+
+![Desktop Mobile](https://res.cloudinary.com/kolle1993/image/upload/v1671992529/P5%20Readme/Mobile_home_page_vbj6sl.png)
+
+## Form Page Desktop:
+
+![Form Page Desktop](https://res.cloudinary.com/kolle1993/image/upload/v1671993392/P5%20Readme/New_Wireframe_2_ofvcse.png)
+
+## Form Page - Mobile:
+![Form Page Mobile](https://res.cloudinary.com/kolle1993/image/upload/v1671993755/P5%20Readme/Mobile_POST_PAGE_jhghe8.png)
+
+## Site Navigation:
+### Site Nav logged out:
+![Site Navigation Signed Out](https://res.cloudinary.com/kolle1993/image/upload/v1671994959/P5%20Readme/SIGNED_OUT_NAV_j3mnrw.png)
+
+### Site Nav logged in:

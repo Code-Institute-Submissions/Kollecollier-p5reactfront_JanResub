@@ -10,8 +10,9 @@
 }
 
 * {
-    box-sizing: border-box;
-    font-size: large;
+    padding: 4px;
+    font-weight: 900;
+    color: black;
   }
   
   a {
