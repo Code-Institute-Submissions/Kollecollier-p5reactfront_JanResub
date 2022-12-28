@@ -253,6 +253,7 @@ The error was caused by my index.js was set <React.StrictMode><App />,
 - Python
 - React Javascript snippet
 - React Typescript snippet (XAcademy)
+- Cloudinary storage
 
 # Deployment
 
