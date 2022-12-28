@@ -12,6 +12,14 @@ The Metal Blog is a social media image and blog based platform for metal lover's
 ## Table of Contents
 
 + [UX](#ux "UX")
++ [User Stories](#user-stories "User Stories")
++ [Features](#features "Features")
++ [Testing](#testing "Testing")
++ [Debugging](#debugging "Debugging")
++ [Technologies Used](#technologies "Technologies Used")
++ [Deployment](#deployment "Deployment")
++ [Credits](#credits "Credits")
++ [Contact](#contact "Contact")
 
 # UX
 
@@ -136,6 +144,24 @@ I have included links to the [Issues](https://github.com/Kollecollier/p5reactfro
 - Private account's.
 - More and improved profile editing
 
+## Testing
+
+### Manual Testing:
+
+1. CRUD functionality has been tested for each of the following: Posts | Comments | Likes | Follow | Profile
+ - Likes & Follow may only be created & deleted
+ - Profile may only be updated
+
+2. All nav links open to the correct page.
+
+3. Pages intended for logged-in users only will redirect logged-out users back to the home page.
+
+4. Users are able to create a new account.
+
+5. Users with an existing account are able to log in.
+
+6. Each user has the ability to log out.
+
 # Validator Testing
 
 ## CSS frontend page:
@@ -164,7 +190,7 @@ I have included links to the [Issues](https://github.com/Kollecollier/p5reactfro
 
  ![Mobile](https://res.cloudinary.com/kolle1993/image/upload/v1672225831/P5%20Readme/lighthouse_desktop_aztnju.png)
 
- # DEBUGGING
+ # Debugging
 
 1. Unfollow function was not working due to a 405 delete corserror:
   ![unfollowError](https://res.cloudinary.com/kolle1993/image/upload/v1672225987/P5%20Readme/unfollow_error_u5xxij.png).
@@ -191,14 +217,16 @@ The error was caused by my index.js was set <React.StrictMode><App />,
 
 - The error was some comments intendation error and syntax error in cloudinary that has been resolved.
 
-# Main Languages Used
+# Technologies
+
+## Main Languages Used
 - HTML5
 - CSS3
 - Javascript
 - Python
 - SQL - Postgres
 
-# Frameworks, Libraries & Extentions used:
+## Frameworks, Libraries & Extentions used:
 - Google Fonts : For the site fonts.
 
 - Font Awesome : To add icons to the social links in the footer & navigation sections.
@@ -248,7 +276,7 @@ The error was caused by my index.js was set <React.StrictMode><App />,
 
 - The Heroku live app can be found [Here](https://p5front.herokuapp.com/)
 
-# Credits & Content
+# Credits
 
 [Emojipedia](https://emojipedia.org/) for the horn icon's and bat icons
 
