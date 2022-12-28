@@ -6,23 +6,10 @@ informing o a a acendant error, This was fixed within the Navbar compenetent bu 
 href tag in the <navlink></navlink>, removing this also removed the issue from the console.
 
 
-Console logged error that the rendering was running in strict mode.
-The error was caused by my index.js was set <React.StrictMode><App />, 
-The solution was removing <React.StrictMode><App /> and just chaning it to <App />
-
 Deployment error showed that there was an access error(image)
 was solved by adding tthe following cors (image)
 This error was fixed
 
-Unfollow function was not working due to a 405 delete cors error(image).
-The error was caused by the delete function being called on the wrong view in my url pattern's
-The error was fixed by changing the called view from:path "views.FollowerList.as_view())" to: views.FollowerDetail.as_view()). 
-
-Frontend 401 token error in consol.
-Was fixed by installing jwt decoder and adding a fuction to refresh tokens in the utilis file.
 
 
 
-
-fix, feed section
-adjust profile icon
